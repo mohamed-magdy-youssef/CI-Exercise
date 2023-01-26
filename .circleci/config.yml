@@ -23,7 +23,7 @@ jobs:
       - run: npm audit
 
 workflows:
-  project_workflow:
+  project-workflow:
     jobs:
       - build
       - test:
