@@ -22,13 +22,11 @@ jobs:
       - checkout
       - run: npm audit
 
-work flows:
+workflows:
   project_workflow:
     jobs:
       - build
       - test:
-        requires:
-          - build
+        requires: build
       - analyze:
-        requires:
-          - test
+        requires: test
