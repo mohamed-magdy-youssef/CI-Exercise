@@ -22,3 +22,17 @@ jobs:
       - checkout
       - run: npm audit
 
+workflows:
+  # say-hello-workflow:
+  #   jobs:
+  #     - say-hello
+  ci-workflow:
+    jobs:
+      - build
+      - test:
+        requires:
+          - build
+      - analyze:
+        requires:
+          - test
+          
