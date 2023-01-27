@@ -10,7 +10,7 @@ jobs:
       - save_cache:
           key: npm-packages
           path: 
-            - ~/
+            - ~/npm
       - run: npm run lint 
   test:
     docker:
